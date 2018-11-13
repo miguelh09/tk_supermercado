@@ -86,8 +86,6 @@ function reporte_de_ventas_page() {
 		$counter = 0;
 	?>
 
-
-
 	<form action="<?php echo bloginfo('url') ?>/wp-content/plugins/Miguel-Plugin/prueba.php" method="post">
 		<table>
 			<tr>
@@ -107,7 +105,7 @@ function reporte_de_ventas_page() {
 					$sku = $product_obj->get_sku();
 					$quantity = $product_obj->get_total_sales();
 					$price = $product_obj->get_price();
-					$total_price = $product_obj->get_sale_price();
+					$total_price = $quantity * $price;
 					$total_sold = $quantity * $price;
 				?>
 					<tr>
@@ -135,8 +133,6 @@ function reporte_de_ventas_page() {
 		<input type="hidden" name="guardar" value="true"><br>
 		<input id="download_btn" type="submit" value="EXPORTAR (XLS)">
 	</form>
-
-	
 
 </div>
  

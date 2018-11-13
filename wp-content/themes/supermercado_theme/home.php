@@ -37,7 +37,7 @@ $products = new WP_Query(
 						);">
 					</div>
 				</div>
-				<div class="category"><?php echo $cat; ?></div>
+				<div class="category <?php echo strtolower($cat); ?>"><?php echo $cat; ?></div>
 				<div class="info_product">
 					<div class="title"><?php echo get_the_title(); ?></div>
 					<div class="excerpt"><?php echo get_the_excerpt(); ?></div>

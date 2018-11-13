@@ -9,8 +9,12 @@
  * @package supermercado_theme
  */
 
-?>
-
+		if (!is_front_page()) {
+		?>
+			</section><!-- .container -->
+		<?php
+		}
+		?>
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
@@ -32,5 +36,13 @@
 
 <?php wp_footer(); ?>
 
+<script src="<?php bloginfo('template_url'); ?>/required/js/jquery.js" ></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous">
+</script>
+<script src="<?php bloginfo('template_url'); ?>/required/bootstrap/js/bootstrap.min.js" ></script>
+    
 </body>
 </html>

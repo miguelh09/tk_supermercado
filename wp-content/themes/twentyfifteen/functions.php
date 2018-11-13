@@ -425,3 +425,8 @@ require get_template_directory() . '/inc/template-tags.php';
  * @since Twenty Fifteen 1.0
  */
 require get_template_directory() . '/inc/customizer.php';
+
+
+$disableSidebar = get_post_meta($post->ID, 'disableSidebar', $single = true);
+if ($disableSidebar !== 'true') { get_sidebar(); }
+

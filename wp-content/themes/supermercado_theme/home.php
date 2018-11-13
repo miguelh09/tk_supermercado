@@ -26,10 +26,6 @@ $products = new WP_Query(
 			$product_obj = wc_get_product( $post->ID );
 			$price = $product_obj->price;
 			$cat = get_the_category_by_ID($product_obj->category_ids[0]);
-
-			//echo get_cat_slug($product_obj->category_ids[0]);
-
-			
 		?>
 		<section class="col-12 col-md-6 col-lg-4 test_products">
 			<div class="wrapper">
